@@ -274,4 +274,4 @@ PYTHONPATH=/path/to/toolkit-remix python mcp_server.py
 
 ## License
 
-This MCP server is part of the RTX Remix Toolkit and follows the same license terms.
+This MCP server follows the same license terms as RTX Remix Toolkit.
