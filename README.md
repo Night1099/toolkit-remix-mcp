@@ -31,12 +31,25 @@ This MCP server provides comprehensive development assistance for the RTX Remix 
 
 ## Installation
 
-1. Install MCP dependencies:
+### Prerequisites
+
+This MCP server must be cloned into the root directory of the RTX Remix Toolkit repository to function properly.
+
+1. **Clone this repository into your RTX Remix Toolkit root**:
+```bash
+# Navigate to your RTX Remix Toolkit repository root
+cd /path/to/your/rtx-remix-toolkit
+
+# Clone the MCP server into the root directory
+git clone https://github.com/your-org/toolkit-remix-mcp .
+```
+
+2. **Install MCP dependencies**:
 ```bash
 pip install -r requirements-mcp.txt
 ```
 
-2. Make the server executable:
+3. **Make the server executable**:
 ```bash
 chmod +x mcp_server.py
 ```
