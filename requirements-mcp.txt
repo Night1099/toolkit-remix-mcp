@@ -1,0 +1,3 @@
+# MCP Server Requirements for RTX Remix Toolkit
+mcp>=1.0.0
+tomllib; python_version<"3.11"
