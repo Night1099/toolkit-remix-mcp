@@ -33,23 +33,15 @@ This MCP server provides comprehensive development assistance for the RTX Remix 
 
 ### Prerequisites
 
-This MCP server must be cloned into the root directory of the RTX Remix Toolkit repository to function properly.
+This MCP server is included as part of the RTX Remix Toolkit repository and is located in the `toolkit-remix-mcp/` directory.
 
-1. **Clone this repository into your RTX Remix Toolkit root**:
+1. **Install MCP dependencies**:
 ```bash
-# Navigate to your RTX Remix Toolkit repository root
-cd /path/to/your/rtx-remix-toolkit
-
-# Clone the MCP server into the root directory
-git clone https://github.com/your-org/toolkit-remix-mcp .
-```
-
-2. **Install MCP dependencies**:
-```bash
+cd toolkit-remix-mcp
 pip install -r requirements-mcp.txt
 ```
 
-3. **Make the server executable**:
+2. **Make the server executable**:
 ```bash
 chmod +x mcp_server.py
 ```
@@ -62,12 +54,12 @@ Add the MCP server to your Claude Code configuration:
 
 ```bash
 # Add the MCP server (run from the repository root)
-claude mcp add rtx-remix-toolkit python mcp_server.py
+claude mcp add rtx-remix-toolkit python toolkit-remix-mcp/mcp_server.py
 
 # Verify it was added
 claude mcp list
 
-# Get server details
+# Get server details  
 claude mcp get rtx-remix-toolkit
 ```
 
@@ -80,7 +72,7 @@ Add this configuration to your Claude Desktop settings:
   "mcpServers": {
     "rtx-remix-toolkit": {
       "command": "python",
-      "args": ["/path/to/toolkit-remix/mcp_server.py"],
+      "args": ["/path/to/toolkit-remix/toolkit-remix-mcp/mcp_server.py"],
       "env": {
         "PYTHONPATH": "/path/to/toolkit-remix"
       }
@@ -107,6 +99,7 @@ Once added, you can use the MCP server in your Claude Code conversations:
 
 Run the MCP server directly:
 ```bash
+cd toolkit-remix-mcp
 python mcp_server.py
 ```
 
@@ -269,6 +262,7 @@ When adding new tools or resources:
 For debugging, you can run the server with additional logging:
 
 ```bash
+cd toolkit-remix-mcp
 PYTHONPATH=/path/to/toolkit-remix python mcp_server.py
 ```
 
