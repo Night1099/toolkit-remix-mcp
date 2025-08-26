@@ -33,10 +33,10 @@ This MCP server provides comprehensive development assistance for the RTX Remix 
 
 ### Prerequisites
 
-This MCP server is included as part of the RTX Remix Toolkit repository and is located in the `toolkit-remix-mcp/` directory.
 
 1. **Install MCP dependencies**:
 ```bash
+git clone https://github.com/Night1099/toolkit-remix-mcp
 cd toolkit-remix-mcp
 pip install -r requirements-mcp.txt
 ```
@@ -269,3 +269,4 @@ PYTHONPATH=/path/to/toolkit-remix python mcp_server.py
 ## License
 
 This MCP server follows the same license terms as RTX Remix Toolkit.
+
